@@ -21,7 +21,7 @@ export const profile: Profile = {
   companyName: 'Chagno Tech',
   tagline: 'Conectando você ao que importa.',
   // Coloque sua imagem em public/logo.png. Use null para exibir as iniciais.
-  logo: '/logo.png',
+  logo: `${import.meta.env.BASE_URL}logo.png`,
   initials: 'CT',
   footer: '© 2026 Chagno Tech. Todos os direitos reservados.',
 }
