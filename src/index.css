@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  color: #f4f4f5;
+  background: #090909;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.page-shell {
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.055), transparent 38%),
+    #090909;
+}
+
+.ambient {
+  position: absolute;
+  z-index: -1;
+  width: 360px;
+  height: 360px;
+  border-radius: 9999px;
+  filter: blur(100px);
+  opacity: 0.11;
+  pointer-events: none;
+}
+
+.ambient-one {
+  top: 8%;
+  left: -260px;
+  background: #777;
+}
+
+.ambient-two {
+  right: -270px;
+  bottom: 4%;
+  background: #444;
+}
+
+.logo-frame {
+  display: flex;
+  width: 92px;
+  height: 92px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 25px;
+  background: linear-gradient(145deg, #1c1c1c, #101010);
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.35), inset 0 1px rgba(255,255,255,.04);
+  font-size: 23px;
+}
+
+.link-card {
+  border: 1px solid rgba(255, 255, 255, 0.085);
+  background: linear-gradient(110deg, rgba(255,255,255,.055), rgba(255,255,255,.025));
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    background 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.link-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.19);
+  background: linear-gradient(110deg, rgba(255,255,255,.085), rgba(255,255,255,.04));
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+}
+
+.link-card:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
